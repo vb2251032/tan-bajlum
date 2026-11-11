@@ -840,7 +840,7 @@ body {
     */
     background-image: 
         linear-gradient(rgba(6, 18, 8, 0.78), rgba(4, 12, 5, 0.85)), 
-        url('../imagenes/fondo-selva.jpg');
+        url('../fondo-selva.jpg');
         
     background-size: cover;
     background-position: center;
