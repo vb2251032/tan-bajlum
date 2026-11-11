@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dioses Olmecas - T'an Bajlum</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Script para aplicar el idioma guardado antes de que cargue la página -->
+    <script>
+        (function() {
+            const idiomaGuardado = localStorage.getItem('idioma_seleccionado') || 'es';
+            if (idiomaGuardado === 'en') {
+                // Si el usuario eligió inglés, traducimos al cargar
+                document.addEventListener('DOMContentLoaded', () => aplicarTraduccion('en'));
+            }
+        })();
+    </script>
+
+</head>
+<body>
+
+    <!-- 1. NUEVO: BOTÓN SELECTOR DE IDIOMA (Colócalo arriba a la derecha en todas tus páginas) -->
+    <div class="selector-idioma">
+        <button id="btn-es" class="lang-btn activo" onclick="cambiarIdioma('es')">ES</button>
+        <span class="separador-lang">|</span>
+        <button id="btn-en" class="lang-btn" onclick="cambiarIdioma('en')">EN</button>
+    </div>
+
+    <header class="encabezado">
+        <h1 data-es="T'an Bajlum" data-en="T'an Bajlum">T'an Bajlum</h1>
+        <p class="subtitulo" data-es="PARQUE-MUSEO LA VENTA" data-en="LA VENTA PARK-MUSEUM">PARQUE-MUSEO LA VENTA</p>
+    </header>
+
+    <!-- Menú Principal -->
+    <nav class="menu">
+        <a href="index-principal.html" data-es="Presentación" data-en="Presentation">Presentación</a>
+        <a href="nosotros.html" data-es="Nosotros" data-en="About Us">Nosotros</a>
+        <a href="servicios.html" data-es="Audios" data-en="Audios">Audios</a> 
+        <a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+        <a href="mapa.html" class="categoria-activa" data-es="Mapa" data-en="Map">Mapa</a>
+    </nav>
+
+    <!-- Submenú de Categorías -->
+    <nav class="submenu-categorias">
+        <a href="../paginas/cabezas-colosales.html" data-es="Cabezas Colosales" data-en="Colossal Heads">Cabezas Colosales</a>
+        <a href="../paginas/animales.html" data-es="Animales" data-en="Animals">Animales</a>
+        <a href="../paginas/monumentos.html" data-es="Monumentos" data-en="Monuments">Monumentos</a>
+    </nav>
+
+    <div class="titulo-seccion">
+        <h2 data-es="Colección: Animales Olmecas" data-en="Collection: Olmec Animals">Colección: Animales Olmecas</h2>
+    </div>
+
+    <!-- Lista de Audios de esta Categoría -->
+    <section class="contenedor-galeria">
+    
+        <!-- Elemento 1 -->
+        <div class="tarjeta-pieza">
+            <div class="contenido-item">
+                <img src="../imagenes/serpienteemplumada.jpg" alt="Serpiente Emplumada">
+                <div class="info-item">
+                    <h3 data-es="Serpiente Emplumada" data-en="Feathered Serpent">Serpiente Emplumada</h3>
+                    <p data-es="Cultura Olmeca<br>Basalto esculpido.<br>Cosmovisión primigenias." data-en="Olmec Culture<br>Sculpted basalt.<br>Primal worldview.">Cultura Olmeca<br>Basalto esculpido.<br>Cosmovisión primigenias.</p>
+                </div>
+            </div>
+
+            <div class="doble-reproductor-box">
+                <div class="fila-audio">
+                    <div class="etiqueta-idioma">
+                        <span>🇲🇽</span>
+                        <span class="siglas-idioma">(ESP)</span>
+                    </div>
+                    <audio class="reproductor-audio" controls>
+                        <source src="../audios/serpespa.mp4" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+
+                <div class="fila-audio">
+                    <div class="etiqueta-idioma">
+                        <span>🇺🇸</span>
+                        <span class="siglas-idioma">(ENG)</span>
+                    </div>
+                    <audio class="reproductor-audio" controls>
+                        <source src="../audios/serpiente.ogg" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- Elemento 2 -->
+        <div class="tarjeta-pieza">
+            <div class="contenido-item">
+                <img src="../imagenes/jaguarhumanizado.jpg" alt="Jaguar Humanizado">
+                <div class="info-item">
+                    <h3 data-es="Jaguar Humanizado" data-en="Humanized Jaguar">Jaguar Humanizado</h3>
+                    <p data-es="Cultura Olmeca<br>Basalto esculpido.<br>Poder Chamánico." data-en="Olmec Culture<br>Sculpted basalt.<br>Shamanic Power.">Cultura Olmeca<br>Basalto esculpido.<br>Poder Chamánico.</p>
+                </div>
+            </div>
+            <div class="doble-reproductor-box">
+                <div class="fila-audio">
+                    <div class="etiqueta-idioma">
+                        <span>🇲🇽</span>
+                        <span class="siglas-idioma">(ESP)</span>
+                    </div>
+                    <audio class="reproductor-audio" controls>
+                        <source src="../audios/jaguaesp.mp4" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+                <div class="fila-audio">
+                    <div class="etiqueta-idioma">
+                        <span>🇺🇸</span>
+                        <span class="siglas-idioma">(ENG)</span>
+                    </div>
+                    <audio class="reproductor-audio" controls>
+                        <source src="../audios/jaguar.ogg" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- Elemento 3 -->
+        <div class="tarjeta-pieza">
+            <div class="contenido-item">
+                <img src="../imagenes/jaguarbb.jpg" alt="El bebé Jaguar">
+                <div class="info-item">
+                    <h3 data-es="El bebé Jaguar" data-en="The Baby Jaguar">El bebé Jaguar</h3>
+                    <p data-es="Cultura Olmeca<br>Basalto esculpido.<br>Simbolismo de origen." data-en="Olmec Culture<br>Sculpted basalt.<br>Symbolism of origin.">Cultura Olmeca<br>Basalto esculpido.<br>Simbolismo de origen.</p>
+                </div>
+            </div>
+            <div class="doble-reproductor-box">
+                <div class="fila-audio">
+                    <div class="etiqueta-idioma">
+                        <span>🇲🇽</span>
+                        <span class="siglas-idioma">(ESP)</span>
+                    </div>
+                    <audio class="reproductor-audio" controls>
+                        <source src="../audios/bbjaguarespa.mp4" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+                <div class="fila-audio">
+                    <div class="etiqueta-idioma">
+                        <span>🇺🇸</span>
+                        <span class="siglas-idioma">(ENG)</span>
+                    </div>
+                    <audio class="reproductor-audio" controls>
+                        <source src="../audios/babyjaguar.ogg" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- Elemento 4 -->
+        <div class="tarjeta-pieza">
+            <div class="contenido-item">
+                <img src="../imagenes/estela.jpg" alt="Estela del Rey">
+                <div class="info-item">
+                    <h3 data-es="Estela del Rey Estela" data-en="King's Stela">Estela del Rey Estela</h3>
+                    <p data-es="Cultura Olmeca<br>Basalto esculpido.<br>Relive histórico." data-en="Olmec Culture<br>Sculpted basalt.<br>Historical relief.">Cultura Olmeca<br>Basalto esculpido.<br>Relive histórico.</p>
+                </div>
+            </div>
+            <div class="doble-reproductor-box">
+                <div class="fila-audio">
+                    <div class="etiqueta-idioma">
+                        <span>🇲🇽</span>
+                        <span class="siglas-idioma">(ESP)</span>
+                    </div>
+                    <audio class="reproductor-audio" controls>
+                        <source src="../audios/estelaesp.mp4" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+                <div class="fila-audio">
+                    <div class="etiqueta-idioma">
+                        <span>🇺🇸</span>
+                        <span class="siglas-idioma">(ENG)</span>
+                    </div>
+                    <audio class="reproductor-audio" controls>
+                        <source src="../audios/estela.mp4" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Elemento 5 -->
+        <div class="tarjeta-pieza">
+            <div class="contenido-item">
+                <img src="../imagenes/mono.jpg" alt="Monolito de mono">
+                <div class="info-item">
+                    <h3 data-es="Monolito de mono" data-en="Monkey Monolith">Monolito de mono</h3>
+                    <p data-es="Cultura Olmeca<br>Basalto esculpido.<br>Fauna sagrada." data-en="Olmec Culture<br>Sculpted basalt.<br>Sacred fauna.">Cultura Olmeca<br>Basalto esculpido.<br>Fauna sagrada.</p>
+                </div>
+            </div>
+            <div class="doble-reproductor-box">
+                <div class="fila-audio">
+                    <div class="etiqueta-idioma">
+                        <span>🇲🇽</span>
+                        <span class="siglas-idioma">(ESP)</span>
+                    </div>
+                    <audio class="reproductor-audio" controls>
+                        <source src="../audios/monolitoespa.mp4" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+                <div class="fila-audio">
+                    <div class="etiqueta-idioma">
+                        <span>🇺🇸</span>
+                        <span class="siglas-idioma">(ENG)</span>
+                    </div>
+                    <audio class="reproductor-audio" controls>
+                        <source src="../audios/mono.mp4" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+            </div>
+        </div>        
+       
+    </section>
+
+    <footer class="pie">
+        <p>EXPOUMMA-T'AN BAJLUM</p>
+    </footer>
+
+    <!-- 2. SCRIPT ACTUALIZADO PARA TODAS LAS PÁGINAS -->
+    <script>
+        // Función unificada para aplicar la traducción
+        function aplicarTraduccion(idioma) {
+            // Actualizar botones activos si existen en la página
+            const btnEs = document.getElementById('btn-es');
+            const btnEn = document.getElementById('btn-en');
+            if (btnEs && btnEn) {
+                btnEs.classList.toggle('activo', idioma === 'es');
+                btnEn.classList.toggle('activo', idioma === 'en');
+            }
+
+            // Traducir textos con atributos data-es / data-en (Soporta etiquetas HTML como <br>)
+            const elementos = document.querySelectorAll('[data-es]');
+            elementos.forEach(el => {
+                if (idioma === 'en') {
+                    el.innerHTML = el.getAttribute('data-en');
+                } else {
+                    el.innerHTML = el.getAttribute('data-es');
+                }
+            });
+        }
+
+        // Función que llaman los botones al hacer clic
+        function cambiarIdioma(idioma) {
+            localStorage.setItem('idioma_seleccionado', idioma);
+            aplicarTraduccion(idioma);
+        }
+
+        // Cargar el idioma guardado automáticamente al abrir la página
+        window.addEventListener('DOMContentLoaded', () => {
+            const idiomaGuardado = localStorage.getItem('idioma_seleccionado') || 'es';
+            aplicarTraduccion(idiomaGuardado);
+        });
+    </script>
+
+</body>
+</html>

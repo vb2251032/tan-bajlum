@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- Permite que la pagina se adapte correctamente a celulares y tabletas -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="../css/style.css">
+
+<!-- Script para aplicar el idioma guardado antes de que cargue la página -->
+<script>
+        (function() {
+            const idiomaGuardado = localStorage.getItem('idioma_seleccionado') || 'es';
+            if (idiomaGuardado === 'en') {
+                document.addEventListener('DOMContentLoaded', () => aplicarTraduccion('en'));
+            }
+        })();
+    </script>
+
+<!-- Titulo que aparecera en la pestana del navegador -->
+<title data-es="T'an Bajlum - Inicio" data-en="T'an Bajlum - Home">T'an Bajlum</title>
+</head>
+<body>
+
+    <div class="selector-idioma">
+        <button id="btn-es" class="lang-btn activo" onclick="cambiarIdioma('es')">ES</button>
+        <span class="separador-lang">|</span>
+        <button id="btn-en" class="lang-btn" onclick="cambiarIdioma('en')">EN</button>
+    </div>
+
+<!-- ==========================================
+ENCABEZADO PRINCIPAL DEL SITIO
+========================================== -->
+<header class="encabezado">
+    <h1 id="titulo-principal" data-es="T'an Bajlum" data-en="T'an Bajlum">T'an Bajlum</h1>
+    <p class="subtitulo" data-es="AUDIOGUIAS QR PARQUE MUSEO LA VENTA" data-en="QR AUDIO GUIDES LA VENTA PARK-MUSEUM">AUDIOGUIAS QR PARQUE MUSEO LA VENTA</p>
+</header>
+
+<!-- ==========================================
+MENÚ DE NAVEGACIÓN
+========================================== -->
+<nav class="menu">
+    <a href="../index.html" data-es="Portal / Acceso" data-en="Portal / Access">Portal / Acceso</a>
+    <a href="nosotros.html" data-es="Nosotros" data-en="About Us">Nosotros</a>
+    <a href="servicios.html" data-es="Audios" data-en="Audios">Audios</a> 
+    <a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+    <a href="mapa.html" class="categoria-activa" data-es="Mapa" data-en="Map">Mapa</a>
+</nav>
+
+<!-- ==========================================
+CONTENEDOR PRINCIPAL
+========================================== -->
+<main class="contenedor">
+
+<!-- ==========================================
+SECCIÓN DE BIENVENIDA
+========================================== -->
+<section class="caja-presentacion">
+    <h2 data-es="Bienvenidos" data-en="Welcome">Bienvenidos</h2>
+    <p style="text-align: justify;" class="texto" 
+       data-es="Este sitio fue creado para proporcionar a los turistas y de igual manera a los habitantes del estado de Tabasco, un medio digital intuitivo y accesible que sirva como guía interactiva para navegar e identificarse con las diferentes expresiones culturales, etc." 
+       data-en="This site was created to provide tourists and inhabitants of the state of Tabasco with an intuitive and accessible digital medium that serves as an interactive guide to navigate and identify with different cultural expressions, etc.">
+        Este sitio fue creado para proporcionar a los turistas y de igual manera a los habitantes del estado de Tabasco, un medio digital intuitivo y accesible que sirva como guía interactiva para navegar e identificarse con las diferentes expresiones culturales, etc.
+    </p>
+</section>
+
+<!-- ==========================================
+SECCIÓN INTRODUCTORIA
+========================================== -->
+<section class="caja-presentacion">
+    <h2 data-es="¿Qué es T'an Bajlum?" data-en="What is T'an Bajlum?">¿Qué es T'an Bajlum?</h2>
+    <p style="text-align: justify;" class="texto" 
+       data-es="El proyecto está basado en crear una plataforma en la web interactiva orientada a los turistas y residentes del estado de Tabasco-Villahermosa, con el propósito de la difusión , revalorizar y facilitar el acceso al patrimonio arqueológico e histórico de la región, destacando de manera protagónica la riqueza monumental que se encuentra en las instalaciones del Parque-Museo La Venta." 
+       data-en="The project is based on creating an interactive web platform aimed at tourists and residents of the state of Tabasco-Villahermosa, with the purpose of disseminating, revaluing, and facilitating access to the region's archaeological and historical heritage, prominently highlighting the monumental wealth found in the facilities of the La Venta Park-Museum.">
+        El proyecto está basado en crear una plataforma en la web interactiva orientada a los turistas y residentes del estado de Tabasco-Villahermosa, con el propósito de la difusión , revalorizar y facilitar el acceso al patrimonio arqueológico e histórico de la región, destacando de manera protagónica la riqueza monumental que se encuentra en las instalaciones del Parque-Museo La Venta.
+    </p>
+
+    <p style="text-align: justify;" class="texto" 
+       data-es="La página web no solo funciona como una forma de mantener la información también tiene como propósito ser una asistente dinámico y fácil de usar ayudando de esta forma no solo a las personas si no también a la comunidad del estado al aumentar el turismo." 
+       data-en="The web page not only functions as a way to maintain information but also aims to be a dynamic and user-friendly assistant, thus helping not only individuals but also the state community by increasing tourism.">
+        La página web no solo funciona como una forma de mantener la información también tiene como propósito ser una asistente dinámico y fácil de usar ayudando de esta forma no solo a las personas si no también a la comunidad del estado al aumentar el turismo.
+    </p>
+</section>
+
+<!-- ==========================================
+SECCIÓN BENEFICIOS
+========================================== -->
+<section class="caja-presentacion">
+    <h2 data-es="Beneficios y/o características" data-en="Benefits and/or features">Beneficios y/o características</h2>
+    <p class="texto" data-es="El desarrollo de esta plataforma web interactiva aporta un alto valor a la cultura, igual de manera educativa y turística, destacándose por las siguientes características clave:" data-en="The development of this interactive web platform brings high value to culture, education, and tourism, standing out for the following key features:">
+        El desarrollo de esta plataforma web interactiva aporta un alto valor a la cultura, igual de manera educativa y turística, destacándose por las siguientes características clave:
+    </p>
+    <p class="texto"><strong data-es="-Accesibilidad e inclusión multimedial" data-en="-Accessibility and multimedia inclusion">-Accesibilidad e inclusión multimedial</strong></p>
+    <p class="texto"><strong data-es="-Experiencia de visita interactiva y en tiempo real" data-en="-Interactive and real-time visit experience">-Experiencia de visita interactiva y en tiempo real</strong></p>
+    <p class="texto"><strong data-es="-Impulso al turismo local y regional" data-en="-Boost to local and regional tourism">-Impulso al turismo local y regional</strong></p>
+    <p class="texto"><strong data-es="-Fomento de la identidad y educación cultural" data-en="-Promotion of identity and cultural education">-Fomento de la identidad y educación cultural</strong></p>
+    <p class="texto"><strong data-es="-Solución digital eficiente y de bajo costo" data-en="-Efficient and low-cost digital solution">-Solución digital eficiente y de bajo costo</strong></p>
+</section>
+
+<!-- ==========================================
+SECCIÓN JUSTIFICACIÓN
+========================================== -->
+<section class="caja-presentacion">
+    <h2 data-es="Justificación" data-en="Justification">Justificación</h2>
+    <p style="text-align: justify;" class="texto" 
+       data-es="La riqueza histórica del estado de Tabasco y del Parque-Museo La Venta posee un valor incalculable a nivel mundial. Sin embargo, existe una brecha en cómo se transmite esta información a las nuevas generaciones y visitantes a través de medios tradicionales.<br><br>Para solucionar esto, el equipo T'an Bajlum desarrolló una plataforma web interactiva que moderniza la divulgación prehispánica. A través de recursos fotográficos, mapas de orientación y un módulo inclusivo de audioguías para personas con discapacidad visual, buscamos romper barreras de accesibilidad, fortalecer el orgullo de la identidad tabasqueña e impulsar el turismo y la educación mediante el uso de tecnologías digitales." 
+       data-en="The historical wealth of the state of Tabasco and the La Venta Park-Museum holds incalculable worldwide value. However, there is a gap in how this information is transmitted to new generations and visitors through traditional media.<br><br>To solve this, the T'an Bajlum team developed an interactive web platform that modernizes pre-Hispanic dissemination. Through photographic resources, orientation maps, and an inclusive audio guide module for visually impaired people, we seek to break accessibility barriers, strengthen the pride of Tabascan identity, and boost tourism and education through the use of digital technologies.">
+        La riqueza histórica del estado de Tabasco y del Parque-Museo La Venta posee un valor incalculable a nivel mundial. 
+        Sin embargo, existe una brecha en cómo se transmite esta información a las nuevas generaciones y visitantes a través 
+        de medios tradicionales.
+        <br><br>
+        Para solucionar esto, el equipo T'an Bajlum desarrolló una plataforma web interactiva que moderniza la divulgación prehispánica.
+         A través de recursos fotográficos, mapas de orientación y un módulo inclusivo de audioguías para personas con discapacidad visual,
+          buscamos romper barreras de accesibilidad, fortalecer el orgullo de la identidad tabasqueña e impulsar el turismo y la educación 
+          mediante el uso de tecnologías digitales.
+    </p>
+</section>
+
+<!-- ==========================================
+SECCIÓN LIMITANTES
+========================================== -->
+<section class="caja-presentacion">
+    <h2 data-es="Limitantes" data-en="Limitations">Limitantes</h2>
+    <p style="text-align: justify;" class="texto" 
+       data-es="El principal reto del proyecto radicó en deficiencias de comunicación y organización interna dentro del equipo. La falta de una coordinación fluida dificultó la asignación eficiente de tareas, la alineación de objetivos y el cumplimiento a tiempo de los compromisos, lo que afectó el ritmo de trabajo y el alcance final esperado." 
+       data-en="The main challenge of the project lay in communication deficiencies and internal organization within the team. The lack of smooth coordination hindered the efficient assignment of tasks, the alignment of objectives, and the timely fulfillment of commitments, which affected the work pace and the final expected scope.">
+        El principal reto del proyecto radicó en deficiencias de comunicación y organización interna dentro del equipo.
+        La falta de una coordinación fluida dificultó la asignación eficiente de tareas, la alineación de objetivos y el
+        cumplimiento a tiempo de los compromisos, lo que afectó el ritmo de trabajo y el alcance final esperado.
+    </p>
+</section>
+
+<!-- ==========================================
+SECCIÓN DE IMAGEN PRINCIPAL
+========================================== -->
+<section class="galeria2">
+    <img src="../imagenes/fotoentrada1.jpg" alt="Imagen principal del sitio">
+</section>
+
+<!-- ==========================================
+SECCIÓN DE TARJETAS
+========================================== -->
+<section class="tarjetas">
+    <article class="tarjeta">
+        <h3 data-es="AUDIOGUIAS INTERACTIVAS" data-en="INTERACTIVE AUDIO GUIDES">AUDIOGUIAS INTERACTIVAS</h3>
+        <p style="text-align: justify;" data-es="Escucha descripciones detalladas de las piezas arqueológicas y monumentos emblemáticos mientras realizas tu recorrido." data-en="Listen to detailed descriptions of archaeological pieces and emblematic monuments while taking your tour.">Escucha descripciones detalladas de las piezas arqueológicas y monumentos emblemáticos mientras realizas tu recorrido.</p>
+    </article>
+
+    <article class="tarjeta especial">
+        <h3 data-es="UBICACIÓN Y MAPAS" data-en="LOCATION AND MAPS">UBICACIÓN Y MAPAS</h3>
+        <p style="text-align: justify;" data-es="Ubica de forma rápida las icónicas Cabezas Colosales y altares dentro de las instalaciones del parque-museo." data-en="Quickly locate the iconic Colossal Heads and altars within the park-museum facilities.">Ubica de forma rápida las icónicas Cabezas Colosales y altares dentro de las instalaciones del parque-museo.</p>
+    </article>
+
+    <article class="tarjeta">
+        <h3 data-es="INCLUSION Y ACCESIBILIDAD" data-en="INCLUSION AND ACCESSIBILITY">INCLUSION Y ACCESIBILIDAD</h3>
+        <p style="text-align: justify;" data-es="Diseñado para facilitar el acceso a la cultura a personas con discapacidad visual y visitantes de todas las edades." data-en="Designed to facilitate access to culture for people with visual disabilities and visitors of all ages.">Diseñado para facilitar el acceso a la cultura a personas con discapacidad visual y visitantes de todas las edades.</p>
+    </article>
+</section>
+
+</main>
+
+<!-- ==========================================
+PIE DE PÁGINA
+========================================== -->
+<footer class="pie">
+    <p data-es="EXPOUMMA-T'AN BAJLUM" data-en="EXPOUMMA-T'AN BAJLUM">EXPOUMMA-T'AN BAJLUM</p>
+</footer>
+
+<!-- SCRIPT UNIFICADO DE TRADUCCIÓN -->
+<script>
+        function aplicarTraduccion(idioma) {
+            const btnEs = document.getElementById('btn-es');
+            const btnEn = document.getElementById('btn-en');
+            if (btnEs && btnEn) {
+                btnEs.classList.toggle('activo', idioma === 'es');
+                btnEn.classList.toggle('activo', idioma === 'en');
+            }
+
+            const elementos = document.querySelectorAll('[data-es]');
+            elementos.forEach(el => {
+                if (idioma === 'en') {
+                    el.innerHTML = el.getAttribute('data-en');
+                } else {
+                    el.innerHTML = el.getAttribute('data-es');
+                }
+            });
+        }
+
+        function cambiarIdioma(idioma) {
+            localStorage.setItem('idioma_seleccionado', idioma);
+            aplicarTraduccion(idioma);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const idiomaGuardado = localStorage.getItem('idioma_seleccionado') || 'es';
+            aplicarTraduccion(idiomaGuardado);
+        });
+    </script>
+    
+</body>
+</html>
