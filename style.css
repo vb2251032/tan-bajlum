@@ -1,0 +1,1841 @@
+/* =========================================================
+   CONCEPTOS BÁSICOS DE CSS
+
+   margin: espacio por fuera del elemento.
+   padding: espacio por dentro del elemento.
+   box-sizing: border-box: hace que el tamaño total del elemento sea más fácil de controlar.
+   width: ancho.
+   height: alto.
+   background-color: color de fondo.
+   color: color del texto.
+   border: borde.
+   border-radius: redondea esquinas.
+   text-align: alineación del texto.
+   display: flex: acomoda elementos de forma flexible.
+   hover: efecto cuando el cursor pasa sobre un elemento.
+========================================================= */
+
+/* ==========================================
+   SELECTOR UNIVERSAL
+   Se aplica en TODAS las páginas:
+   - index.html
+   - nosotros.html
+   - servicios.html
+   - galeria.html
+   - fondos.html
+========================================== */
+* {
+    margin: 0; /* Elimina el margen exterior por defecto en todos los elementos */
+    padding: 0; /* Elimina el espacio interior por defecto en todos los elementos */
+    box-sizing: border-box; /* Hace más fácil controlar el tamaño total de los elementos */
+}
+
+/* ==========================================
+   ESTILOS GENERALES DEL BODY
+   Se aplica al cuerpo completo de TODAS las páginas
+========================================== */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Define la tipografía general del sitio */
+    background-color: #f4f6f8; /* Coloca un fondo gris claro en toda la página */
+    color: #333333; /* Define el color base del texto */
+    line-height: 1.6; /* Mejora la lectura separando las líneas */
+}
+
+/* ==========================================
+   ENCABEZADO
+   Se usa en la parte superior de:
+   - index.html
+   - nosotros.html
+   - servicios.html
+   - galeria.html
+   - fondos.html
+========================================== */
+.encabezado {
+    background: linear-gradient(to right, #0f4c81, #1d70b8); /* Fondo degradado azul */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el contenido */
+    padding: 30px 20px; /* Espacio interno */
+}
+
+/* ==========================================
+   TÍTULO PRINCIPAL
+   Solo se usa en index.html
+========================================== */
+#titulo-principal {
+    font-size: 36px; /* Tamaño grande del título principal */
+    letter-spacing: 1px; /* Separa ligeramente las letras */
+}
+
+/* ==========================================
+   SUBTÍTULO
+   Se usa en el encabezado de TODAS las páginas
+========================================== */
+.subtitulo {
+    font-size: 18px; /* Tamaño del subtítulo */
+    margin-top: 10px; /* Separación con respecto al título */
+}
+
+/* ==========================================
+   MENÚ DE NAVEGACIÓN
+   Se usa en TODAS las páginas
+========================================== */
+.menu {
+    background-color: #083d62; /* Fondo azul oscuro */
+    text-align: center; /* Centra los enlaces */
+    padding: 12px; /* Espacio interno */
+}
+
+/* ==========================================
+   ENLACES DEL MENÚ
+   Se aplica a los <a> del menú en TODAS las páginas
+========================================== */
+.menu a {
+    color: white; /* Color blanco en los enlaces */
+    text-decoration: none; /* Quita el subrayado */
+    margin: 0 12px; /* Separación horizontal entre enlaces */
+    font-weight: bold; /* Texto en negritas */
+    padding: 8px 12px; /* Espacio interno estilo botón */
+    display: inline-block; /* Permite aplicar padding y margen correctamente */
+    border-radius: 6px; /* Redondea las esquinas */
+}
+
+/* ==========================================
+   EFECTO HOVER EN EL MENÚ
+   Se usa cuando el cursor pasa sobre el menú
+========================================== */
+.menu a:hover {
+    background-color: #0ea5e9; /* Cambia el fondo al pasar el mouse */
+    color: #ffffff; /* Mantiene el texto blanco */
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+   Se usa para agrupar el contenido central de TODAS las páginas
+========================================== */
+.contenedor {
+    width: 90%; /* El contenido ocupa el 90% del ancho */
+    max-width: 1100px; /* Limita el ancho máximo */
+    margin: 25px auto; /* Centra el contenido */
+}
+
+/* ==========================================
+   SECCIONES DE CONTENIDO CON CAJA
+   Se aplican en:
+   - .bienvenida -> index.html
+   - .contenido-pagina -> nosotros.html, servicios.html, galeria.html, fondos.html
+   - .caja-info -> nosotros.html
+========================================== */
+.bienvenida,
+.contenido-pagina,
+.caja-info {
+    background-color: white; /* Fondo blanco */
+    margin-bottom: 20px; /* Separación entre bloques */
+    padding: 20px; /* Espacio interno */
+    border-left: 6px solid #1d70b8; /* Línea azul decorativa */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Sombra suave */
+}
+
+/* ==========================================
+   ENCABEZADOS
+   Se usan en todas las páginas
+========================================== */
+h1, h2, h3 {
+    margin-bottom: 12px; /* Espacio inferior bajo los títulos */
+}
+
+/* ==========================================
+   CLASE BASE DE TEXTO
+   Se usa en párrafos de todas las páginas
+========================================== */
+.texto {
+    margin-bottom: 12px; /* Separa un párrafo de otro */
+    font-size: 17px; /* Tamaño cómodo para lectura */
+}
+
+/* ==========================================
+   TEXTO SECUNDARIO
+   Solo se usa en index.html
+========================================== */
+.texto-secundario {
+    color: #0f4c81; /* Texto en color azul */
+    font-style: italic; /* Texto en cursiva */
+}
+
+/* ==========================================
+   IMÁGENES PRINCIPALES
+   Se aplican en:
+   - .portada img -> index.html
+   - .imagen-contenido img -> nosotros.html
+========================================== */
+.portada img,
+.imagen-contenido img {
+    width: 100%; /* La imagen ocupa todo el ancho disponible */
+    max-height: 380px; /* Altura máxima */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 12px; /* Esquinas redondeadas */
+    border: 4px solid #d9e2ec; /* Borde gris claro */
+    margin-bottom: 20px; /* Separación inferior */
+}
+
+/* ==========================================
+   CONTENEDOR DE TARJETAS
+   Se usa en:
+   - index.html
+   - servicios.html
+========================================== */
+.tarjetas {
+    display: flex; /* Organiza tarjetas en fila */
+    flex-wrap: wrap; /* Permite pasar a otra línea */
+    gap: 20px; /* Espacio entre tarjetas */
+    margin-top: 20px; /* Separación superior */
+}
+
+/* ==========================================
+   TARJETA INDIVIDUAL
+   Se usa en:
+   - index.html
+   - servicios.html
+========================================== */
+.tarjeta {
+    background-color: white; /* Fondo blanco */
+    flex: 1 1 300px; /* Tamaño flexible con base de 300px */
+    padding: 20px; /* Espacio interno */
+    border: 2px solid #dbe4ea; /* Borde gris claro */
+    border-radius: 12px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Sombra ligera */
+}
+
+/* ==========================================
+   PÁRRAFOS DENTRO DE TARJETAS
+   Se usa en:
+   - index.html
+   - servicios.html
+========================================== */
+.tarjeta p {
+    color: #444; /* Color gris oscuro para el texto */
+}
+
+/* ==========================================
+   IMÁGENES DENTRO DE TARJETAS
+   Se usa en servicios.html
+========================================== */
+.tarjeta img {
+    width: 100%; /* La imagen ocupa todo el ancho */
+    height: 180px; /* Altura fija */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 10px; /* Esquinas redondeadas */
+    margin-bottom: 12px; /* Separación del texto */
+}
+
+/* ==========================================
+   TARJETA ESPECIAL
+   Se usa en:
+   - index.html
+   - servicios.html
+========================================== */
+.especial {
+    background-color: #eef6ff; /* Fondo azul muy claro */
+    border-color: #7db7e8; /* Cambia el color del borde */
+}
+
+/* ==========================================
+   GALERÍA DE IMÁGENES
+   Se usa solo en galeria.html
+========================================== */
+.galeria {
+    display: flex; /* Organiza imágenes de forma flexible */
+    flex-wrap: wrap; /* Permite múltiples filas */
+    gap: 20px; /* Espacio entre imágenes */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+/* ==========================================
+   IMÁGENES DE LA GALERÍA
+   Se usa solo en galeria.html
+========================================== */
+.galeria img {
+    width: 300px; /* Ancho fijo */
+    height: 220px; /* Altura fija */
+    object-fit: cover; /* Ajusta la imagen */
+    border-radius: 12px; /* Esquinas redondeadas */
+    border: 3px solid #cfd8dc; /* Borde gris claro */
+    transition: transform 0.3s ease; /* Suaviza la animación */
+}
+
+/* ==========================================
+   EFECTO HOVER EN IMÁGENES DE GALERÍA
+   Se usa solo en galeria.html
+========================================== */
+.galeria img:hover {
+    transform: scale(1.05); /* Aumenta ligeramente la imagen */
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+   Se usa al final de TODAS las páginas
+========================================== */
+.pie {
+    background-color: #083d62; /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 15px; /* Espacio interno */
+    margin-top: 30px; /* Separación superior */
+}
+
+/* =========================================================
+   ESTILOS ADICIONALES PARA LA PÁGINA fondos.html
+========================================================= */
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Caja con fondo sólido
+   Se aplica en:
+   <section id="fondo-ejemplo">
+========================================== */
+#fondo-ejemplo {
+    background-color: rgb(60, 5, 212); /* Fondo azul intenso */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espacio interno */
+    border-radius: 12px; /* Redondea las esquinas */
+    margin-bottom: 20px; /* Separa de la siguiente sección */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Caja general de demostración de fondos
+   Se aplica en los section con class="fondo-demo"
+========================================== */
+.fondo-demo {
+    min-height: 220px; /* Altura mínima para que la caja se vea amplia */
+    padding: 20px; /* Espacio interior para el texto */
+    margin-bottom: 20px; /* Separación entre cajas */
+    border: 2px solid #bfc9d1; /* Borde gris claro */
+    border-radius: 12px; /* Esquinas redondeadas */
+    color: #111; /* Color oscuro para el texto */
+    background-color: #ffffff; /* Fondo blanco base */
+    overflow: hidden; /* Evita que se desborde visualmente el contenido */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Caja interna para texto sobre fondo con imagen
+   Sirve para que el texto no se pierda visualmente
+========================================== */
+.bloque-texto-fondo {
+    background-color: rgba(255, 255, 255, 0.88); /* Fondo blanco semitransparente */
+    padding: 15px; /* Espacio interno */
+    border-radius: 10px; /* Esquinas redondeadas */
+    max-width: 650px; /* Limita el ancho de la caja */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Imagen con no-repeat
+   Se aplica en:
+   <section id="imagen-no-repeat">
+========================================== */
+#imagen-no-repeat {
+    background-image: url("../imagenes/galeria1.jpg"); /* Imagen de fondo */
+    background-size: 220px 120px; /* Tamaño fijo */
+    background-repeat: no-repeat; /* La imagen no se repite */
+    background-position: right bottom; /* Se coloca abajo a la derecha */
+    padding-bottom: 140px; /* Reserva espacio para que el texto no se encime */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Imagen con repeat-x
+   Se aplica en:
+   <section id="imagen-repeat-x">
+========================================== */
+#imagen-repeat-x {
+    background-image: url("../imagenes/galeria2.jpg"); /* Imagen de fondo */
+    background-size: 140px 80px; /* Tamaño pequeño para mostrar repetición */
+    background-repeat: repeat-x; /* Repetición horizontal */
+    background-position: left bottom; /* Se coloca abajo */
+    padding-bottom: 110px; /* Deja espacio libre para que el texto no tape la franja */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Imagen con repeat-y
+   Se aplica en:
+   <section id="imagen-repeat-y">
+========================================== */
+#imagen-repeat-y {
+    background-image: url("../imagenes/galeria3.jpg"); /* Imagen de fondo */
+    background-size: 110px 80px; /* Tamaño de la imagen */
+    background-repeat: repeat-y; /* Repetición vertical */
+    background-position: right top; /* La franja se coloca del lado derecho */
+    padding-right: 130px; /* Reserva espacio para el texto */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Caja de práctica de bordes
+   Se aplica en:
+   <section class="borde-practica">
+========================================== */
+.borde-practica {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px; /* Espacio interno */
+    margin-bottom: 20px; /* Separación inferior */
+    border-color: rgb(151, 187, 175); /* Color del borde */
+    border-style: dotted solid double dashed; /* Estilo distinto en cada lado */
+    border-width: 10px; /* Grosor del borde */
+    border-radius: 20px; /* Esquinas redondeadas */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Título de borde
+   Se aplica en:
+   <h2 id="titulo-borde">
+========================================== */
+#titulo-borde {
+    color: tomato; /* Color tomate para el título */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Párrafo con class de texto-borde
+   Se aplica en:
+   <p class="texto-borde">
+========================================== */
+p.texto-borde {
+    color: slateblue; /* Color azul violáceo */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Párrafo especial
+   Se aplica en:
+   <p class="especial-borde">
+========================================== */
+p.especial-borde {
+    color: #f00000; /* Texto rojo */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Ejemplo de selectores de descendencia
+   Se aplica a los párrafos dentro de:
+   <div class="contenedor-descendencia">
+========================================== */
+.contenedor-descendencia p {
+    color: aqua; /* Cambia el color de los párrafos dentro del div */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Encabezados dentro del div
+   Se aplica a h2 y h3 dentro del div
+========================================== */
+.contenedor-descendencia h2,
+.contenedor-descendencia h3 {
+    color: #000; /* Texto negro en encabezados dentro del div */
+}
+
+/* ==========================================
+   PÁGINA: fondos.html
+   SECCIÓN: Caja general del ejemplo de descendencia
+========================================== */
+.contenedor-descendencia {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px; /* Espacio interno */
+    border-left: 6px solid #1d70b8; /* Línea decorativa izquierda */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    margin-bottom: 20px; /* Separación inferior */
+}
+
+/*==============================================
+   PAGINA: nosotros.html
+   SEECCION: efecto imagenes galeria
+============================================*/
+.galeria2 img{
+    width: 100%; /* Ancho fijo */
+    height: 380px; /* Altura fija */
+    object-fit: cover; /* Ajusta la imagen */
+    border-radius: 12px; /* Esquinas redondeadas */
+    border: 3px solid #cfd8dc; /* Borde gris claro */
+    transition: transform 0.3s ease; /* Suaviza la animación */
+    margin-bottom: 20px; /* Separacion inferior*/
+}
+
+.galeria2 img {
+    display: flex; /* Organiza imágenes de forma flexible */
+    flex-wrap: wrap; /* Permite múltiples filas */
+    gap: 20px; /* Espacio entre imágenes */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+/* ==========================================
+   EFECTO HOVER EN IMÁGENES DE GALERÍA
+   Se usa solo en nosotros.html
+========================================== */
+.galeria2 img:hover {
+    transform: scale(1.15); /* Aumenta ligeramente la imagen */
+}
+
+/* ==========================================
+   SECCIONES DE CONTENIDO CON CAJA
+   Se aplican en:
+   - .bienvenida -> audios.html
+   - .contenido-pagina -> nosotros.html, servicios.html, galeria.html, fondos.html
+   - .caja-info -> nosotros.html
+========================================== */
+.bienvenida,
+.contenido-pagina,
+.caja-info {
+    background-color: white; /* Fondo blanco */
+    margin-bottom: 20px; /* Separación entre bloques */
+    padding: 20px; /* Espacio interno */
+    border-left: 6px solid #1d70b8; /* Línea azul decorativa */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Sombra suave */
+}
+
+/* ==========================================
+   ESTILO DEL FONDO PRINCIPAL (Opción 1: Selva)
+   ========================================== */
+body {
+    /* Fondo oscuro de reserva por si la imagen tarda en cargar */
+    background-color: #1b261b; 
+    
+    /* Imagen de selva con una capa oscura encima (40% de opacidad) para dar contraste */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url('../imagenes/fondo-selva.jpg');
+    
+    /* Configuración para que la imagen cubra toda la pantalla de forma fija */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Efecto elegante: el fondo se queda fijo mientras haces scroll */
+    
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Estilo para las tarjetas de las piezas con fondo translúcido y elegante */
+.tarjeta-pieza {
+    background: rgba(0, 0, 0, 0.65); /* Fondo negro semitransparente para que la selva se vea difuminada atrás */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Un borde sutil tipo cristal */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); /* Efecto difuminado moderno (si el navegador lo soporta) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+/* Hacemos que los títulos de las piezas cambien a color blanco para que resalten */
+.detalles-texto h3 {
+    color: #ffffff !important;
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+}
+
+/* Cambiamos los textos descriptivos a un tono gris claro muy legible */
+.detalles-texto p {
+    color: #e0e0e0 !important;
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+/* Si tienes una caja de introducción arriba (como el cuadro de bienvenida), también ponle este estilo */
+.introduccion-audios {
+    background: rgba(0, 0, 0, 0.70) !important;
+    border-left: 5px solid #d4af37 !important; /* Un toque dorado arqueológico */
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.introduccion-audios h2 {
+    color: #ffffff !important;
+}
+
+.introduccion-audios p {
+    color: #f0f0f0 !important;
+}
+
+/* Estilo general para todas las cajas o tarjetas de texto en esta página */
+.caja-presentacion, .tarjeta, section, div[class*="caja"] {
+    background: rgba(0, 0, 0, 0.70); /* Fondo oscuro semitransparente tipo cristal */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px); /* Efecto difuminado moderno */
+}
+
+/* Forzar que todos los títulos dentro de estas cajas sean blancos */
+h2, h3, .caja-presentacion h2, .tarjeta h2 {
+    color: #ffffff !important;
+}
+
+/* Forzar que todos los párrafos y textos del cuerpo sean en un tono claro y legible */
+p, li, .caja-presentacion p, .tarjeta p {
+    color: #e6e6e6 !important;
+}
+
+/* ==========================================
+   ENCABEZADO Y MENÚ ESTILO CRISTAL / SELVA
+   ========================================== */
+
+/* 1. Encabezado principal flotante y translúcido */
+header.encabezado {
+    background: rgba(10, 25, 15, 0.75); /* Tono verde-negro muy oscuro y elegante */
+    backdrop-filter: blur(10px); /* Efecto difuminado de cristal */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid #d4af37; /* Detalle dorado arqueológico */
+    padding: 30px 20px 15px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0;
+}
+
+header.encabezado h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+header.encabezado .subtitulo {
+    color: #d4af37; /* Dorado sutil para destacar el tema cultural */
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* 2. Menú de navegación integrado y estilizado */
+nav.menu {
+    background: rgba(5, 15, 10, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Mantiene el menú fijo arriba al deslizar la página */
+}
+
+nav.menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover al pasar el ratón por los botones del menú */
+nav.menu a:hover {
+    color: #ffffff;
+    background: rgba(212, 175, 55, 0.2); /* Sutil destello dorado */
+    border-bottom: 2px solid #d4af37;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   CONFIGURACIÓN GENERAL Y FONDO DE SELVA
+   ========================================== */
+body {
+    background-color: #0d1a11;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../imagenes/fondo-selva.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #f2f2f2;
+}
+
+/* ==========================================
+   ENCABEZADO PRINCIPAL (Estilo Monumental)
+   ========================================== */
+header.encabezado {
+    background: rgba(5, 15, 10, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 3px solid #d4af37; /* Línea de oro arqueológico */
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+header.encabezado h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin: 0 0 8px 0;
+    letter-spacing: 3px;
+    font-weight: 800;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    /* Sutil destello dorado en el título principal */
+    background: linear-gradient(135deg, #ffffff 60%, #d4af37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header.encabezado .subtitulo {
+    color: #d4af37;
+    font-size: 0.95rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* ==========================================
+   MENÚ DE NAVEGACIÓN FLOTANTE (Sticky Glass)
+   ========================================== */
+nav.menu {
+    background: rgba(3, 10, 7, 0.92);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav.menu a {
+    color: #dcdcdc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav.menu a:hover {
+    color: #ffffff;
+    background: rgba(212, 175, 55, 0.25);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   CONTENEDORES Y TARJETAS DE CRISTAL (Glassmorphism Pro)
+   ========================================== */
+.caja-presentacion, .tarjeta, section, div[class*="caja"], .tarjeta-pieza {
+    background: rgba(8, 20, 13, 0.72);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 4px solid #d4af37; /* Distintivo arqueológico izquierdo */
+    border-radius: 14px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease;
+    animation: aparecer 0.8s ease-out;
+}
+
+/* Efecto de elevación al pasar el mouse por las tarjetas */
+.caja-presentacion:hover, .tarjeta:hover, .tarjeta-pieza:hover {
+    border-color: rgba(212, 175, 55, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Tipografía interna de las tarjetas */
+h2, h3 {
+    color: #ffffff !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+p, li {
+    color: #dedede !important;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Animación de entrada fluida */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   ADAPTACIÓN RESPONSIVA (Celulares)
+   ========================================== */
+@media (max-width: 768px) {
+    header.encabezado h1 {
+        font-size: 2.2rem;
+    }
+    nav.menu {
+        gap: 15px;
+        padding: 12px 10px;
+        flex-wrap: wrap;
+    }
+    nav.menu a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+    .caja-presentacion, .tarjeta, .tarjeta-pieza {
+        margin: 15px;
+        padding: 20px;
+    }
+}
+
+body {
+    /* Fondo estilo "Noche en la Selva / Museo" con gradientes profesionales */
+    background-color: #081109;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(20, 50, 30, 0.4) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(15, 35, 20, 0.5) 0%, transparent 50%),
+        linear-gradient(135deg, #050a06 0%, #0d1a11 50%, #050a06 100%);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #f2f2f2;
+}
+
+body {
+    /* Color de respaldo por si tarda en cargar la imagen */
+    background-color: #061208;
+    
+    /* 
+      MAGIA AQUÍ: Una capa semitransparente color verde selva muy oscuro (rgba 6, 18, 8 con 75% de opacidad) 
+      que deja asomar la foto de la selva con elegancia, manteniendo la formalidad y alta legibilidad.
+    */
+    background-image: 
+        linear-gradient(rgba(6, 18, 8, 0.78), rgba(4, 12, 5, 0.85)), 
+        url('../imagenes/fondo-selva.jpg');
+        
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #f2f2f2;
+}
+
+/* ==========================================
+   ENCABEZADO CON EFECTO DE CRISTAL Y SELVA
+   ========================================== */
+header.encabezado {
+    /* Fondo verde-negro semitransparente para que la selva se note detrás */
+    background: rgba(6, 18, 8, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 3px solid #d4af37; /* Línea dorada arqueológica */
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+header.encabezado h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin: 0 0 8px 0;
+    letter-spacing: 3px;
+    font-weight: 800;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(135deg, #ffffff 60%, #d4af37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header.encabezado .subtitulo {
+    color: #d4af37;
+    font-size: 0.95rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* ==========================================
+   MENÚ DE NAVEGACIÓN FLOTANTE (Con la selva de fondo)
+   ========================================== */
+nav.menu {
+    /* Fondo semitransparente para que la selva se filtre también aquí */
+    background: rgba(4, 12, 5, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav.menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav.menu a:hover {
+    color: #ffffff;
+    background: rgba(212, 175, 55, 0.25);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   REJILLA Y TARJETAS DE CATEGORÍAS (AUDIOS)
+   ========================================== */
+.contenedor-categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.tarjeta-categoria {
+    background: rgba(8, 20, 13, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 4px solid #d4af37; /* Detalle dorado superior */
+    border-radius: 16px;
+    padding: 25px;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta-categoria:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(212, 175, 55, 0.8);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+.icono-categoria {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.tarjeta-categoria h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+}
+
+.tarjeta-categoria p {
+    color: #d1d1d1;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn-explorar {
+    color: #d4af37;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   SUBMENÚ SECUNDARIO DE CATEGORÍAS
+   ========================================== */
+.submenu-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    background: rgba(4, 12, 5, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    margin-bottom: 30px;
+}
+
+.submenu-categorias a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.submenu-categorias a:hover, .submenu-categorias a.categoria-activa {
+    color: #ffffff;
+    background: rgba(212, 175, 55, 0.25);
+    border-color: #d4af37;
+}
+
+.titulo-seccion h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-top: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Pantalla de Acceso / Bienvenida */
+.body-acceso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.caja-login {
+    text-align: center;
+    max-width: 450px !important;
+    width: 100% !important;
+    padding: 40px !important;
+}
+
+.caja-login h1 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.texto-bienvenida {
+    color: #cccccc;
+    font-size: 0.95rem;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.campo-input {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.campo-input label {
+    display: block;
+    color: #d4af37;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.campo-input input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.campo-input input:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.btn-ingresar {
+    background: linear-gradient(135deg, #d4af37, #aa8c2c);
+    color: #040c05;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn-ingresar:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #e5bf41, #d4af37);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Contenedor en cuadrícula de 2 columnas */
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 25px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Estructura individual de cada pieza */
+.item-coleccion {
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3); /* Línea dorada sutil */
+}
+
+/* Alineación de la foto a la izquierda y texto a la derecha */
+.contenido-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+/* Tamaño miniatura controlado para la imagen */
+.contenido-item img {
+    width: 105px;
+    height: 105px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Textos de las piezas */
+.info-item h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: #f4d068; /* Color dorado acorde a tu tema */
+}
+
+.info-item p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+/* Controles del reproductor mini */
+.reproductor-audio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.btn-play {
+    background: #d4af37;
+    color: #111;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.btn-play:hover {
+    background: #f4d068;
+}
+
+.slider-audio {
+    flex-grow: 1;
+    accent-color: #d4af37;
+    cursor: pointer;
+    height: 4px;
+}
+
+/* Adaptabilidad para pantallas de celular */
+@media (max-width: 768px) {
+    .contenedor-galeria {
+        grid-template-columns: 1fr; /* Cambia a 1 sola columna en dispositivos móviles */
+    }
+}
+
+/* Contenedor general en cuadrícula de 2 columnas con espacio amplio */
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo de tarjeta idéntico a tus contenedores de referencia */
+.tarjeta-pieza {
+    background-color: #121614; /* Fondo oscuro elegante */
+    border: 2px solid #d4af37;  /* Borde dorado característico */
+    border-radius: 12px;       /* Esquinas redondeadas */
+    padding: 22px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Distribución interna de imagen y texto */
+.contenido-item {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+/* Imagen con un tamaño más grande y proporcionado */
+.contenido-item img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+/* Estilos de los textos dentro de la tarjeta */
+.info-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    color: #f4d068; /* Título dorado brillante */
+}
+
+.info-item p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+    color: #e0e0e0; /* Texto claro legible */
+}
+
+/* Reproductor de audio integrado en la tarjeta */
+.reproductor-audio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.btn-play {
+    background: #d4af37;
+    color: #111;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.btn-play:hover {
+    background: #f4d068;
+}
+
+.slider-audio {
+    flex-grow: 1;
+    accent-color: #d4af37;
+    cursor: pointer;
+    height: 5px;
+}
+
+/* Adaptabilidad para dispositivos móviles (se vuelve 1 sola columna) */
+@media (max-width: 768px) {
+    .contenedor-galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Caja general que contiene los dos reproductores */
+.doble-reproductor-box {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Cada fila (una para español, otra para inglés) */
+.fila-audio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilo para la bandera y las siglas (ESP) / (ENG) */
+.etiqueta-idioma {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-width: 65px; /* Asegura que ambas barras de audio queden alineadas verticalmente */
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.siglas-idioma {
+    color: #d4af37; /* Tono dorado sutil para las siglas */
+    font-size: 0.75rem;
+}
+
+/* Reproductor nativo de audio */
+.reproductor-audio {
+    width: 100%;
+    height: 36px;
+    outline: none;
+}
+
+/* Contenedor principal de la galería masiva */
+.contenedor-galeria-masiva {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Tarjeta individual de cada imagen */
+.item-galeria {
+    position: relative;
+    background-color: #121212;
+    border: 2px solid #d4af37; /* El tono dorado formal de tu sitio */
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3; /* Mantiene todas las fotos con la misma proporción limpia */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-galeria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Imagen dentro de la tarjeta */
+.item-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.item-galeria:hover img {
+    transform: scale(1.08); /* Efecto zoom elegante al acercar el mouse */
+}
+
+/* Franja de texto sutil que aparece abajo al pasar el cursor */
+.overlay-galeria {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #f1f1f1;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-top: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.item-galeria:hover .overlay-galeria {
+    opacity: 1; /* Muestra el título de la foto de forma profesional */
+}
+
+/* Estilo para la caja de descripción superior */
+.seccion-descripcion-galeria {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.tarjeta-info-galeria {
+    background-color: rgba(18, 18, 18, 0.9);
+    border: 2px solid #d4af37;
+    border-radius: 12px;
+    padding: 20px 30px;
+    text-align: center;
+    color: #f1f1f1;
+}
+
+.tarjeta-info-galeria h2 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+/* --- GALERÍA FOTOGRÁFICA PROPORCIONAL --- */
+.galeria-fotografica {
+    display: grid;
+    /* Columnas anchas para que la foto luzca grande (mínimo 340px) */
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); 
+    gap: 25px;
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.foto-tarjeta {
+    position: relative;
+    background-color: #0d0d0d;
+    border: 2px solid #d4af37; /* Borde dorado formal */
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+
+.foto-tarjeta:hover {
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.35);
+}
+
+/* La imagen ocupa todo el espacio de forma limpia */
+.foto-tarjeta img {
+    width: 100%;
+    height: 280px; /* Altura más amplia para mayor visibilidad */
+    object-fit: cover; /* Se ajusta de forma limpia y formal */
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+.foto-tarjeta:hover img {
+    filter: brightness(1.1);
+}
+
+/* Pie de foto elegante sobrepuesto al pasar el cursor */
+.pie-foto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    color: #ffffff;
+    padding: 15px 12px 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* --- VISOR PANTALLA COMPLETA (LIGHTBOX) --- */
+.modal-visor {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagen-ampliada {
+    max-width: 90%;
+    max-height: 80vh;
+    border: 3px solid #d4af37;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.texto-pie-modal {
+    margin-top: 15px;
+    color: #d4af37;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.cerrar-modal:hover {
+    color: #d4af37;
+}
+
+/* VARIABLES DE DISEÑO INSTITUCIONAL */
+:root {
+  --dorado-principal: #d4af37;
+  --dorado-brillo: #f5cf53;
+  --gradiente-dorado: linear-gradient(135deg, #d4af37 0%, #a37c15 100%);
+  --fondo-tarjeta: rgba(15, 23, 16, 0.72);
+  --borde-dorado: rgba(212, 175, 55, 0.35);
+  --texto-blanco: #ffffff;
+  --texto-suave: #d1d8c9;
+  --fuente-titulo: 'Cinzel', serif;
+  --fuente-cuerpo: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CONFIGURACIÓN DEL BODY */
+.body-acceso {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: var(--fuente-cuerpo);
+  color: var(--texto-blanco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+
+  /* IMAGEN DE FONDO (Si tienes tu propia imagen local, cambia la URL por la tuya, ej: ../img/fondo.jpg) */
+  background-image: url('../imagenes/fondo-selva.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Capa de degradado oscuro sobre la imagen para contraste */
+.overlay-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(4, 10, 6, 0.88) 100%);
+  z-index: 1;
+}
+
+/* LAYOUT EN DOS COLUMNAS (PORTAL) */
+.layout-portal {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  width: 90%;
+  max-width: 1100px;
+  padding: 2rem 1rem;
+}
+
+/* ENCABEZADO (COLUMNA IZQUIERDA) */
+.encabezado {
+  flex: 1;
+  text-align: left;
+}
+
+.badge-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dorado-principal);
+  border: 1px solid var(--borde-dorado);
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  margin-bottom: 1.2rem;
+}
+
+#titulo-principal {
+  font-family: var(--fuente-titulo);
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  color: var(--texto-blanco);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+}
+
+.subtitulo {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  margin-top: 0.8rem;
+}
+
+.linea-decorativa {
+  width: 80px;
+  height: 3px;
+  background: var(--gradiente-dorado);
+  margin-top: 1.5rem;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+/* CONTENEDOR DE LA TARJETA (COLUMNA DERECHA) */
+.contenedor-acceso {
+  flex: 0 1 420px;
+}
+
+.tarjeta-audio.caja-login {
+  background: var(--fondo-tarjeta);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--borde-dorado);
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7),
+              inset 0 0 15px rgba(212, 175, 55, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-audio.caja-login:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8),
+              inset 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.tarjeta-audio h2 {
+  font-family: var(--fuente-titulo);
+  font-size: 1.6rem;
+  color: var(--texto-blanco);
+  margin-bottom: 0.8rem;
+}
+
+.texto-bienvenida {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--texto-suave);
+  font-weight: 300;
+  margin-bottom: 1.8rem;
+}
+
+/* CAMPO INPUT PARA EL NOMBRE */
+.campo-input {
+  margin-bottom: 1.2rem;
+}
+
+.campo-input input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.campo-input input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.campo-input input:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--dorado-principal);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+}
+
+/* BOTÓN DE INGRESO */
+.btn-ingresar {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: var(--gradiente-dorado);
+  color: #0f1710;
+  font-family: var(--fuente-cuerpo);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+}
+
+.btn-ingresar:hover {
+  background: var(--dorado-brillo);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+}
+
+.btn-ingresar svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-ingresar:hover svg {
+  transform: translateX(4px);
+}
+
+/* DISEÑO RESPONSIVO (MÓVILES Y TABLETS) */
+@media (max-width: 850px) {
+  .layout-portal {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .encabezado {
+    text-align: center;
+  }
+
+  #titulo-principal {
+    font-size: 2.8rem;
+  }
+
+  .linea-decorativa {
+    margin: 1rem auto 0 auto;
+  }
+
+  .contenedor-acceso {
+    width: 100%;
+  }
+
+  .tarjeta-audio.caja-login {
+    padding: 2rem;
+  }
+}
+
+/* SELECTOR DE IDIOMA FLOTANTE */
+.selector-idioma {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 16, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #a0a89a;
+  font-family: var(--fuente-cuerpo);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  transition: color 0.3s ease;
+}
+
+.lang-btn:hover {
+  color: #ffffff;
+}
+
+.lang-btn.activo {
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.separador-lang {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+}
+
+/* SELECTOR DE IDIOMA FLOTANTE */
+.selector-idioma {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 16, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #a0a89a;
+  font-family: var(--fuente-cuerpo);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  transition: color 0.3s ease;
+}
+
+.lang-btn:hover {
+  color: #ffffff;
+}
+
+.lang-btn.activo {
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.separador-lang {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+}

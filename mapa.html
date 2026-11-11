@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Recorrido 360° - Parque-Museo La Venta" data-en="360° Tour - La Venta Park-Museum">Recorrido 360° - Parque-Museo La Venta</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Script para aplicar el idioma guardado antes de que cargue la página -->
+    <script>
+        (function() {
+            const idiomaGuardado = localStorage.getItem('idioma_seleccionado') || 'es';
+            if (idiomaGuardado === 'en') {
+                document.addEventListener('DOMContentLoaded', () => aplicarTraduccion('en'));
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Selector de idioma en la esquina superior derecha -->
+    <div class="selector-idioma">
+        <button id="btn-es" class="lang-btn activo" onclick="cambiarIdioma('es')">ES</button>
+        <span class="separador-lang">|</span>
+        <button id="btn-en" class="lang-btn" onclick="cambiarIdioma('en')">EN</button>
+    </div>
+
+    <!-- Encabezado Principal -->
+    <header class="encabezado">
+        <h1 data-es="Recorrido Virtual 360°" data-en="360° Virtual Tour">Recorrido Virtual 360°</h1>
+        <p class="subtitulo" data-es="PARQUE-MUSEO LA VENTA - VILLAHERMOSA, TABASCO" data-en="LA VENTA PARK-MUSEUM - VILLAHERMOSA, TABASCO">PARQUE-MUSEO LA VENTA - VILLAHERMOSA, TABASCO</p>
+    </header>
+
+    <!-- Menú Principal -->
+    <nav class="menu">
+        <a href="index-principal.html" data-es="Presentación" data-en="Presentation">Presentación</a>
+        <a href="nosotros.html" data-es="Nosotros" data-en="About Us">Nosotros</a>
+        <a href="servicios.html" data-es="Audios" data-en="Audios">Audios</a> 
+        <a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+        <a href="mapa.html" class="categoria-activa" data-es="Mapa 360°" data-en="360° Map">Mapa 360°</a>
+    </nav>
+
+    <!-- Contenedor Principal con el Recorrido 360° -->
+    <main class="contenedor" style="max-width: 1200px;">
+
+        <section class="caja-presentacion" style="text-align: center;">
+            <h2 data-es="Entrada Principal del Parque-Museo La Venta" data-en="Main Entrance to La Venta Park-Museum">Entrada Principal del Parque-Museo La Venta</h2>
+            <p class="texto" style="max-width: 850px; margin: 0 auto 20px auto;" data-es="Explora en 360° la fachada emblemática del museo. Arrastra con el mouse o la pantalla para girar la vista o avanzar por el recorrido. Haz clic abajo para expandir a pantalla completa." data-en="Explore the emblematic facade of the museum in 360°. Drag with your mouse or screen to rotate the view or advance through the tour. Click below to expand to full screen.">
+                Explora en 360° la fachada emblemática del museo. Arrastra con el mouse o la pantalla para girar la vista o avanzar por el recorrido. Haz clic abajo para expandir a pantalla completa.
+            </p>
+
+            <!-- Contenedor del Visor 360° con la panorámica exacta requerida -->
+            <div style="position: relative; width: 100%; height: 500px; border-radius: 12px; overflow: hidden; border: 2px solid #d4af37; box-shadow: 0 10px 25px rgba(0,0,0,0.6);">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!4v1710000000000!6m8!1m7!1s1bE-7x1T-BlBmDoHZ4DVcw!2m2!1d18.0020468!2d-92.9340049!3f192.54!4f2.2!5f0.782086597401332" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- Botón para Abrir en Modo Modal Pantalla Completa -->
+            <div style="margin-top: 20px;">
+                <button onclick="abrirModal360()" class="btn-explorar" style="background: #d4af37; color: #000; border: none; padding: 12px 25px; border-radius: 25px; font-weight: bold; cursor: pointer; font-family: 'Cinzel', serif; font-size: 1em;" data-es="🖥️ Expandir Recorrido a Pantalla Completa" data-en="🖥️ Expand Tour to Full Screen">
+                    🖥️ Expandir Recorrido a Pantalla Completa
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal / Ventana Emergente a Pantalla Completa -->
+    <div id="modal-360" class="modal-visor" onclick="cerrarModalPorFondo(event)" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; justify-content: center; align-items: center;">
+        <span class="cerrar-modal" onclick="cerrarModal360()" style="position: absolute; top: 15px; right: 25px; font-size: 45px; color: #fff; cursor: pointer; z-index: 10000;">&times;</span>
+        <div style="width: 92%; height: 88%; border: 2px solid #d4af37; border-radius: 12px; overflow: hidden; background: #000;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!4v1710000000000!6m8!1m7!1s1bE-7x1T-BlBmDoHZ4DVcw!2m2!1d18.0020468!2d-92.9340049!3f192.54!4f2.2!5f0.782086597401332" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="pie">
+        <p data-es="EXPOUMMA-T'AN BAJLUM" data-en="EXPOUMMA-T'AN BAJLUM">EXPOUMMA-T'AN BAJLUM</p>
+    </footer>
+
+    <!-- Script de interacción y traducción -->
+    <script>
+        const modal360 = document.getElementById("modal-360");
+
+        function abrirModal360() {
+            modal360.style.display = "flex";
+        }
+
+        function cerrarModal360() {
+            modal360.style.display = "none";
+        }
+
+        function cerrarModalPorFondo(evento) {
+            if (evento.target === modal360) {
+                cerrarModal360();
+            }
+        }
+
+        // Sistema de Traducción Unificado
+        function aplicarTraduccion(idioma) {
+            const btnEs = document.getElementById('btn-es');
+            const btnEn = document.getElementById('btn-en');
+            if (btnEs && btnEn) {
+                btnEs.classList.toggle('activo', idioma === 'es');
+                btnEn.classList.toggle('activo', idioma === 'en');
+            }
+
+            const elementos = document.querySelectorAll('[data-es]');
+            elementos.forEach(el => {
+                if (idioma === 'en') {
+                    el.innerHTML = el.getAttribute('data-en');
+                } else {
+                    el.innerHTML = el.getAttribute('data-es');
+                }
+            });
+        }
+
+        function cambiarIdioma(idioma) {
+            localStorage.setItem('idioma_seleccionado', idioma);
+            aplicarTraduccion(idioma);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const idiomaGuardado = localStorage.getItem('idioma_seleccionado') || 'es';
+            aplicarTraduccion(idiomaGuardado);
+        });
+    </script>
+
+</body>
+</html>

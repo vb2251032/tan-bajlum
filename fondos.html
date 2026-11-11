@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- Permite que la página se adapte correctamente a celulares y tabletas -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Como este archivo está dentro de la carpeta paginas, se regresa un nivel para llegar a la carpeta css -->
+<link rel="stylesheet" href="../css/style.css">
+
+<!-- Script para aplicar el idioma guardado antes de que cargue la página -->
+<script>
+        (function() {
+            const idiomaGuardado = localStorage.getItem('idioma_seleccionado') || 'es';
+            if (idiomaGuardado === 'en') {
+                document.addEventListener('DOMContentLoaded', () => aplicarTraduccion('en'));
+            }
+        })();
+    </script>
+
+<!-- Título que aparecerá en la pestaña del navegador -->
+<title data-es="Fondos CSS - T'an Bajlum" data-en="CSS Backgrounds - T'an Bajlum">Fondos CSS</title>
+</head>
+<body>
+
+    <div class="selector-idioma">
+        <button id="btn-es" class="lang-btn activo" onclick="cambiarIdioma('es')">ES</button>
+        <span class="separador-lang">|</span>
+        <button id="btn-en" class="lang-btn" onclick="cambiarIdioma('en')">EN</button>
+    </div>
+
+<!-- ==========================================
+ENCABEZADO PRINCIPAL
+========================================== -->
+<header class="encabezado">
+    <h1 data-es="Fondos y selectores en CSS" data-en="CSS Backgrounds and Selectors">Fondos y selectores en CSS</h1>
+    <p class="subtitulo" data-es="Práctica de imágenes de fondo, repetición, bordes y selectores" data-en="Practice of background images, repetition, borders, and selectors">Práctica de imágenes de fondo, repetición, bordes y selectores</p>
+</header>
+
+<!-- ==========================================
+MENÚ DE NAVEGACIÓN
+========================================== -->
+<nav class="menu">
+    <a href="/index.html" data-es="Presentación" data-en="Presentation">presentación</a>
+    <a href="../paginas/index-principal.html" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="../paginas/nosotros.html" data-es="Nosotros" data-en="About Us">Nosotros</a>
+    <a href="../paginas/servicios.html" data-es="Audio" data-en="Audio">Audio</a>
+    <a href="../paginas/galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+     <a href="../paginas/mapa.html" class="categoria-activa" data-es="Mapa" data-en="Map">Mapa</a>
+</nav>
+
+<!-- ==========================================
+CONTENEDOR PRINCIPAL
+========================================== -->
+<main class="contenedor">
+
+<!-- Sección introductoria -->
+<section class="contenido-pagina">
+    <h2 data-es="¿Qué se practica en esta página?" data-en="What is practiced on this page?">¿Qué se practica en esta página?</h2>
+    <p class="texto" data-es="En esta página se muestran ejemplos de imágenes de fondo con diferentes configuraciones: sin repetición, repetición horizontal, repetición vertical, posición de fondo y tamaño." data-en="This page shows examples of background images with different configurations: no-repeat, horizontal repetition, vertical repetition, background position, and size.">
+    En esta página se muestran ejemplos de imágenes de fondo con diferentes configuraciones:
+    sin repetición, repetición horizontal, repetición vertical, posición de fondo y tamaño.
+    </p>
+    <p class="texto" data-es="También se incluye un ejemplo de bordes con estilos diferentes y selectores de descendencia." data-en="An example of borders with different styles and descendant selectors is also included.">
+    También se incluye un ejemplo de bordes con estilos diferentes y selectores de descendencia.
+    </p>
+</section>
+
+<!-- ==========================================
+CAJA CON FONDO SÓLIDO
+========================================== -->
+<section id="fondo-ejemplo">
+    <h2 data-es="Propiedad background-color" data-en="background-color Property">Propiedad background-color</h2>
+    <p data-es="Esta sección usa un color de fondo sólido para mostrar el uso de la propiedad <strong>background-color</strong>." data-en="This section uses a solid background color to show the use of the <strong>background-color</strong> property.">
+    Esta sección usa un color de fondo sólido para mostrar el uso de la propiedad
+    <strong>background-color</strong>.
+    </p>
+</section>
+
+<!-- ==========================================
+IMAGEN DE FONDO SIN REPETICIÓN
+========================================== -->
+<section class="fondo-demo" id="imagen-no-repeat">
+    <div class="bloque-texto-fondo">
+        <h2 data-es="Imagen con no-repeat" data-en="Image with no-repeat">Imagen con no-repeat</h2>
+        <p data-es="Aquí la imagen de fondo no se repite. Se usa además una posición específica y un tamaño definido." data-en="Here the background image does not repeat. A specific position and a defined size are also used.">
+        Aquí la imagen de fondo no se repite. Se usa además una posición específica
+        y un tamaño definido.
+        </p>
+    </div>
+</section>
+
+<!-- ==========================================
+IMAGEN REPETIDA EN X
+========================================== -->
+<section class="fondo-demo" id="imagen-repeat-x">
+    <div class="bloque-texto-fondo">
+        <h2 data-es="Imagen con repeat-x" data-en="Image with repeat-x">Imagen con repeat-x</h2>
+        <p data-es="En este ejemplo la imagen se repite de forma horizontal." data-en="In this example the image repeats horizontally.">
+        En este ejemplo la imagen se repite de forma horizontal.
+        </p>
+    </div>
+</section>
+
+<!-- ==========================================
+IMAGEN REPETIDA EN Y
+========================================== -->
+<section class="fondo-demo" id="imagen-repeat-y">
+    <div class="bloque-texto-fondo">
+        <h2 data-es="Imagen con repeat-y" data-en="Image with repeat-y">Imagen con repeat-y</h2>
+        <p data-es="En este ejemplo la imagen se repite de forma vertical." data-en="In this example the image repeats vertically.">
+        En este ejemplo la imagen se repite de forma vertical.
+        </p>
+    </div>
+</section>
+
+<!-- ==========================================
+CAJA PARA PRACTICAR BORDES
+========================================== -->
+<section class="borde-practica">
+    <h2 id="titulo-borde" data-es="Ejemplo de borde compuesto" data-en="Composite border example">Ejemplo de borde compuesto</h2>
+    <p class="texto-borde" data-es="Esta caja muestra distintos estilos de borde en cada lado utilizando la propiedad <strong>border-style</strong>." data-en="This box shows different border styles on each side using the <strong>border-style</strong> property.">
+    Esta caja muestra distintos estilos de borde en cada lado utilizando
+    la propiedad <strong>border-style</strong>.
+    </p>
+    <p class="especial-borde" data-es="También se aplica <strong>border-radius</strong> para redondear las esquinas." data-en="<strong>border-radius</strong> is also applied to round the corners.">
+    También se aplica <strong>border-radius</strong> para redondear las esquinas.
+    </p>
+</section>
+
+<!-- ==========================================
+SELECTORES DE DESCENDENCIA
+========================================== -->
+<div class="contenedor-descendencia">
+    <h2 data-es="Selector de descendencia" data-en="Descendant Selector">Selector de descendencia</h2>
+    <h3 data-es="Ejemplo con div h2, div h3 y div p" data-en="Example with div h2, div h3 and div p">Ejemplo con div h2, div h3 y div p</h3>
+    <p data-es="Este párrafo está dentro de un div, por lo tanto puede recibir un estilo específico mediante un selector de descendencia." data-en="This paragraph is inside a div, so it can receive a specific style through a descendant selector.">
+    Este párrafo está dentro de un div, por lo tanto puede recibir un estilo específico
+    mediante un selector de descendencia.
+    </p>
+</div>
+
+</main>
+
+<!-- ==========================================
+PIE DE PÁGINA
+========================================== -->
+<footer class="pie">
+    <p data-es="Sección Fondos CSS - Sitio de práctica CSS" data-en="CSS Backgrounds Section - CSS Practice Site">Sección Fondos CSS - Sitio de práctica CSS</p>
+</footer>
+
+<!-- SCRIPT UNIFICADO DE TRADUCCIÓN -->
+<script>
+        function aplicarTraduccion(idioma) {
+            const btnEs = document.getElementById('btn-es');
+            const btnEn = document.getElementById('btn-en');
+            if (btnEs && btnEn) {
+                btnEs.classList.toggle('activo', idioma === 'es');
+                btnEn.classList.toggle('activo', idioma === 'en');
+            }
+
+            const elementos = document.querySelectorAll('[data-es]');
+            elementos.forEach(el => {
+                if (idioma === 'en') {
+                    el.innerHTML = el.getAttribute('data-en');
+                } else {
+                    el.innerHTML = el.getAttribute('data-es');
+                }
+            });
+        }
+
+        function cambiarIdioma(idioma) {
+            localStorage.setItem('idioma_seleccionado', idioma);
+            aplicarTraduccion(idioma);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const idiomaGuardado = localStorage.getItem('idioma_seleccionado') || 'es';
+            aplicarTraduccion(idiomaGuardado);
+        });
+    </script>
+    
+</body>
+</html>

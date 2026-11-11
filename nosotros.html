@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- Permite que la página se adapte correctamente a celulares y tabletas -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="../css/style.css">
+
+<!-- Script para aplicar el idioma guardado antes de que cargue la página -->
+<script>
+        (function() {
+            const idiomaGuardado = localStorage.getItem('idioma_seleccionado') || 'es';
+            if (idiomaGuardado === 'en') {
+                document.addEventListener('DOMContentLoaded', () => aplicarTraduccion('en'));
+            }
+        })();
+    </script>
+
+<!-- Título que aparecerá en la pestaña del navegador -->
+<title data-es="Nosotros - T'an Bajlum" data-en="About Us - T'an Bajlum">Nosotros</title>
+</head>
+<body>
+
+    <div class="selector-idioma">
+        <button id="btn-es" class="lang-btn activo" onclick="cambiarIdioma('es')">ES</button>
+        <span class="separador-lang">|</span>
+        <button id="btn-en" class="lang-btn" onclick="cambiarIdioma('en')">EN</button>
+    </div>
+
+<!-- ==========================================
+ENCABEZADO PRINCIPAL
+========================================== -->
+<header class="encabezado">
+    <h1 data-es="Nosotros" data-en="About Us">Nosotros</h1>
+    <p class="subtitulo" data-es="Conoce el propósito de este sitio de práctica" data-en="Learn the purpose of this practice site">Conoce el propósito de este sitio de práctica</p>
+</header>
+
+<!-- ==========================================
+MENÚ DE NAVEGACIÓN
+========================================== -->
+<nav class="menu">
+    <a href="index-principal.html" data-es="Presentación" data-en="Presentation">Presentación</a>
+    <a href="nosotros.html" data-es="Nosotros" data-en="About Us">Nosotros</a>
+    <a href="servicios.html" data-es="Audios" data-en="Audios">Audios</a> 
+    <a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+    <a href="mapa.html" class="categoria-activa" data-es="Mapa" data-en="Map">Mapa</a>
+</nav>
+
+<!-- ==========================================
+CONTENEDOR PRINCIPAL
+========================================== -->
+<main class="contenedor">
+
+<!-- Sección principal de información -->
+<section class="caja-presentacion">
+    <h2 data-es="¿Quiénes somos?" data-en="Who are we?">¿Quiénes somos?</h2>
+
+    <p style="text-align: justify;" class="texto" 
+       data-es="Somos un equipo académico que utiliza este proyecto para el apoyo hacia la gente que esta explorando y esta en busca de información y ayuda sobre el turimos en Villahermosa Tabasco siendo objetivos en el parque Museo la Venta." 
+       data-en="We are an academic team that uses this project to support people who are exploring and looking for information and help about tourism in Villahermosa Tabasco, focusing objectively on the La Venta Museum Park.">
+        Somos un equipo académico que utiliza este proyecto para el apoyo hacia la gente que esta explorando y esta en busca de información
+        y ayuda sobre el turimos en Villahermosa Tabasco siendo objetivos en el parque Museo la Venta.
+    </p>
+</section>
+
+<!-- ==========================================
+SECCIÓN DE IMAGEN
+========================================== -->
+<section class="galeria2">
+    <img src="../imagenes/equipo2.jpeg" alt="Equipo de trabajo">
+</section>
+
+<!-- ==========================================
+CAJA DE INFORMACIÓN ADICIONAL
+========================================== -->
+<section class="caja-presentacion">
+    <h3 data-es="Objetivo didáctico" data-en="Didactic Objective">Objetivo didáctico</h3>
+    <p style="text-align: justify;" 
+       data-es="Aplicar selectores por etiqueta, clase e id; además de trabajar con fondos, bordes, menú de navegación, separación de contenidos y estilos reutilizables." 
+       data-en="Apply tag, class, and id selectors; in addition to working with backgrounds, borders, navigation menu, content separation, and reusable styles.">
+        Aplicar selectores por etiqueta, clase e id; además de trabajar con fondos, bordes,
+        menú de navegación, separación de contenidos y estilos reutilizables.
+    </p>
+</section>
+
+</main>
+
+<!-- ==========================================
+PIE DE PÁGINA
+========================================== -->
+<footer class="pie">
+    <p data-es="EXPOUMMA-T'AN BAJLUM" data-en="EXPOUMMA-T'AN BAJLUM">EXPOUMMA-T'AN BAJLUM</p>
+</footer>
+
+<!-- SCRIPT UNIFICADO DE TRADUCCIÓN -->
+<script>
+        function aplicarTraduccion(idioma) {
+            const btnEs = document.getElementById('btn-es');
+            const btnEn = document.getElementById('btn-en');
+            if (btnEs && btnEn) {
+                btnEs.classList.toggle('activo', idioma === 'es');
+                btnEn.classList.toggle('activo', idioma === 'en');
+            }
+
+            const elementos = document.querySelectorAll('[data-es]');
+            elementos.forEach(el => {
+                if (idioma === 'en') {
+                    el.innerHTML = el.getAttribute('data-en');
+                } else {
+                    el.innerHTML = el.getAttribute('data-es');
+                }
+            });
+        }
+
+        function cambiarIdioma(idioma) {
+            localStorage.setItem('idioma_seleccionado', idioma);
+            aplicarTraduccion(idioma);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const idiomaGuardado = localStorage.getItem('idioma_seleccionado') || 'es';
+            aplicarTraduccion(idiomaGuardado);
+        });
+    </script>
+
+</body>
+</html>
