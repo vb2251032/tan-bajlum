@@ -1546,7 +1546,7 @@ nav.menu a:hover {
   position: relative;
 
   /* IMAGEN DE FONDO (Si tienes tu propia imagen local, cambia la URL por la tuya, ej: ../img/fondo.jpg) */
-  background-image: url('../imagenes/fondo-selva.jpg');
+  background-image: url('fondo-selva.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
