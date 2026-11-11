@@ -1840,16 +1840,4 @@ nav.menu a:hover {
   font-size: 0.85rem;
 }
 
-body {
-    background-color: #061208;
-    margin: 0;
-}
 
-/* Aplica el fondo de la selva a las secciones principales o contenedores de las páginas secundarias */
-main, .pagina-interior, .contenido-principal, section {
-    background-image: linear-gradient(rgba(6, 18, 8, 0.78), rgba(4, 12, 5, 0.85)), url('../fondo-selva.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-}
